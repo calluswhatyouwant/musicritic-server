@@ -31,7 +31,7 @@ const generateAuthReqOptions = (form) => ({
 });
 
 router.get('/login', (req, res) => {
-    const scope = 'user-read-email';
+    const scope = 'user-read-email user-read-recently-played';
     const state = generateRandomState(16);
 
     res.cookie(stateKey, state);
@@ -62,7 +62,7 @@ router.get('/callback', (req, res) => {
 
         request.post(authOptions, (error, response, body) => {
             if (!error && response.statusCode === 200) {
-                res.redirect(`http://localhost:3000/home/${body.access_token}/${body.refresh_token}`);
+                res.redirect(`http://localhost:3000/auth/${body.access_token}/${body.refresh_token}`);
             } else {
                 res.redirect('/#' + querystring.stringify({error: 'invalid_token'}));
             }
