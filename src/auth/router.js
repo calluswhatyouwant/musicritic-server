@@ -8,7 +8,7 @@ const client_id = '5f6e1b51bb2c434d836f49ff7da59c34';
 const client_secret = 'f58243eaed3e4b2b9ee68881a83cc4fc';
 const stateKey = 'spotify_auth_state';
 
-const redirect_uri = 'http://localhost:8000/auth/callback/';
+const redirect_uri = 'http://localhost:5000/auth/callback/';
 const spotify_token_uri = 'https://accounts.spotify.com/api/token';
 const applicationToken = 'Basic ' + new Buffer(client_id + ':' + client_secret).toString('base64');
 
