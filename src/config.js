@@ -9,7 +9,8 @@ config.spotify = {
 
 config.host = {
     baseUri: process.env.BASE_URI || 'http://localhost',
-    port: process.env.PORT || 5000
+    port: process.env.PORT || 5000,
+    production: process.env.NODE_ENV === 'production'
 }
 
 config.client = {

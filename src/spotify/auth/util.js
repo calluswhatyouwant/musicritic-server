@@ -11,7 +11,11 @@ export const generateRandomState = (length) => {
 
 export const getSpotifyAuthUrl = (urlPath) => `${config.spotify.authBaseUri}${urlPath}`;
 
-export const getHostUrl = (urlPath) => `${config.host.baseUri}:${config.host.port}${urlPath}`;
+export const getHostUrl = (urlPath) => {
+    if (config.host.production)
+        return `${config.host.baseUri}${urlPath}`;
+    return `${config.host.baseUri}:${config.host.port}${urlPath}`;
+};
 
 export const getClientUrl = (urlPath) => `${config.client.baseUri}${urlPath}`;
 
