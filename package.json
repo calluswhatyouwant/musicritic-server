@@ -1,0 +1,18 @@
+{
+  "name": "idontknowmyname-server",
+  "version": "0.0.1-alpha",
+  "scripts": {
+    "dev": "babel-node index.js",
+    "prestart": "npm install && babel src --out-dir dist/",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "querystring": "^0.2.0",
+    "request": "^2.85.0"
+  }
+}
