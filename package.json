@@ -1,10 +1,10 @@
 {
-  "name": "idontknowmyname",
-  "version": "v0.0.1-ALPHA",
-  "main": "server.js",
-  "license": "MIT",
+  "name": "idontknowmyname-server",
+  "version": "0.0.1-alpha",
   "scripts": {
-    "start": "babel-node server.js"
+    "dev": "babel-node src/index.js",
+    "prestart": "babel src --out-dir dist/",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
