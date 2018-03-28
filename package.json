@@ -3,7 +3,7 @@
   "version": "0.0.1-alpha",
   "scripts": {
     "dev": "babel-node index.js",
-    "prestart": "npm install && babel src --out-dir dist/",
+    "prestart": "babel src --out-dir dist/",
     "start": "node dist/index.js"
   },
   "dependencies": {

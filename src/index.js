@@ -13,7 +13,8 @@ app.use(cors());
 app.use('/auth', router);
 
 const server = http.createServer(app);
+const port = config.host.port;
 
-server.listen(5000, () => {
-    console.log('Listenning on port 5000...');
+server.listen(port, () => {
+    console.log(`Listenning on port ${port}...`);
 });
