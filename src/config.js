@@ -26,7 +26,7 @@ const serviceAccount = {
 }
 
 config.firebase = {
-    serviceAccount: serviceAccount,
+    serviceAccount: process.env.FIREBASE_SERVICE_ACCOUNT || serviceAccount,
     databaseUrl: process.env.FIREBASE_DATABASE_URL
 }
 
